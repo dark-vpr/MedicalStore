@@ -1,0 +1,21 @@
+{
+	"sqltools.connections": [
+		{
+			"mysqlOptions": {
+				"authProtocol": "default",
+				"enableSsl": "Disabled"
+			},
+			"previewLimit": 50,
+			"server": "localhost",
+			"port": 3306,
+			"driver": "MySQL",
+			"name": "darke",
+			"username": "darke",
+			"database": "oms"
+		}
+	],
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"python.formatting.provider": "none"
+}

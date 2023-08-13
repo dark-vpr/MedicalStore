@@ -1,0 +1,217 @@
+122 results - 20 files
+
+controller\favourites.py:
+  28          ite, subtotal, items_len = cart_items()
+  29:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  30      except mysql.connector.Error as err:
+
+controller\medicines.py:
+  24          buid=buyid()
+  25:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  26      except mysql.connector.Error as err:
+
+controller\order.py:
+  26          ite, subtotal, len_items = cart_items()  
+  27:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  28      except mysql.connector.Error as err:
+
+controller\product.py:
+  33          rel = cur.fetchall()
+  34:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  35      except mysql.connector.Error as err:
+
+controller\search.py:
+  45              return redirect(url_for('mhome'))
+  46:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  47      except mysql.connector.Error as err:
+
+controller\supplier.py:
+  43              return redirect(url_for('supplier'))
+  44:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  45      except mysql.connector.Error as err:
+
+  65          items = cur.fetchall()
+  66:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  67      except mysql.connector.Error as err:
+
+controller\utilities.py:
+  31          items = cur.fetchall()
+  32:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  33      except mysql.connector.Error as err:
+
+  52          print(b)
+  53:         # image = ("static/images/d1.jpg","static/images/d7.jpg","static/images/d2.jpg","static/images/d21.jpg","static/images/d23.jpg","static/images/img16.jpg","static/images/img17.jpg","static/images/img21.jpg","static/images/img15.jpg")
+  54      except mysql.connector.Error as err:
+
+templates\cart.html:
+    5          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    6:         <link rel="icon" href="/static/images/favicon.png"/>
+    7          <title>GSAA MediStore</title>
+
+   45                                <div class="img">
+   46:                                   <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+   47                                </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ items_len }} items)</span>
+
+  129                                          <a href="{{ url_for('singleproduct', pid=item[4], rol=item[7]) }}">
+  130:                                             <img title="ana"  src="/static/images/img1.png" style="width: 100px; height: 80px;">
+  131                                          </a>
+
+templates\checkout.html:
+   5          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   6:         <link rel="icon" href="/static/images/favicon.png"/>
+   7          <title> GSAA MediStore</title>
+
+  45                                  <div class="img">
+  46:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+  47                                  </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ len_items }} items)</span>
+
+templates\customer.html:
+  8  <!--===============================================================================================-->	
+  9: 	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+  10  <!--===============================================================================================-->
+
+templates\favourite.html:
+    7          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    8:         <link rel="icon" href="/static/images/favicon.png"/>
+    9          <title>GSAA MediStore</title>
+
+   47                                  <div class="img">
+   48:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+   49                                      </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ items_len }} items)</span>
+
+  227                              <div class="row">
+  228: <!--                                 <div class="col-sm-2 col-xs-6"><img class="img-thumbnail"  src="/static/images/img15.jpg"></div>
+  229   -->                                <div class="col-sm-10 col-xs-6"><p>
+
+  266                                                                  <a href="{{ url_for('singleproduct', pid=item[6], rol=item[4]) }}">
+  267:                                                                     <img src="/static/images/d1.jpg" class="img-responsive" width="200" height="200" />
+  268                                                                  </a>
+
+templates\home.html:
+    5          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    6:         <link rel="icon" href="/static/images/favicon.png"/>
+    7          <title>GSAA Pharmacy</title>
+
+   48                                  <div class="img">
+   49:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+   50                                  </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ len_items }} items)</span>
+
+  257                                                              <a href="{{ url_for('singleproduct', pid= item[6] , rol= item[4]) }}">
+  258:                                                                 <img class="carasoul_image" src="/static/images/img13.jpg">
+  259                                                              </a><br></span>
+
+  333                                                                  <a href="{{ url_for('singleproduct', pid=item[6] , rol= item[4] ) }}">
+  334:                                                                     <img src="/static/images/d1.jpg" class="img-responsive" width="200" height="200" />
+  335                                                                  </a>
+
+  405                                                                  <a href="{{ url_for('singleproduct', pid=item[6] , rol=item[4]) }}">
+  406:                                                                     <img src="/static/images/d23.jpg" class="img-responsive" width="200" height="200"/>
+  407                                                                  </a>
+
+templates\orderhistory.html:
+   5          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   6:         <link rel="icon" href="/static/images/favicon.png"/>
+   7          <title> GSAA MediStore</title>
+
+  45                                  <div class="img">
+  46:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+  47                                  </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ len_items }} items)</span>
+
+templates\product.html:
+    7          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    8:         <link rel="icon" href="/static/images/favicon.png"/>
+    9          <title>GSAA MediStore</title>
+
+   47                                  <div class="img">
+   48:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+   49                                      </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ items_len }} items)</span>
+
+  228                              <div class="row">
+  229:                                 <div class="col-sm-2 col-xs-6"><img class="img-thumbnail"  src="/static/images/img15.jpg"></div>
+  230                                  <div class="col-sm-10 col-xs-6"><p>
+
+  267                                                                  <a href="{{ url_for('singleproduct', pid=item[6], rol=item[4]) }}">
+  268:                                                                     <img src="/static/images/d1.jpg" class="img-responsive" width="200" height="200" />
+  269                                                                  </a>
+
+templates\search.html:
+    7          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    8:         <link rel="icon" href="/static/images/favicon.png"/>
+    9          <title>GSAA MediStore</title>
+
+   47                                  <div class="img">
+   48:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+   49                                      </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ items_len }} items)</span>
+
+  228                              <div class="row">
+  229:                                 <div class="col-sm-2 col-xs-6"><img class="img-thumbnail"  src="/static/images/img15.jpg"></div>
+  230                                  <div class="col-sm-10 col-xs-6"><p>
+
+  267                                                                  <a href="{{ url_for('singleproduct', pid=item[6], rol=item[4]) }}">
+  268:                                                                     <img src="/static/images/d1.jpg" class="img-responsive" width="200" height="200" />
+  269                                                                  </a>
+
+templates\signup.html:
+  8  <!--===============================================================================================-->	
+  9: 	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+  10  <!--===============================================================================================-->
+
+templates\single-product.html:
+    6          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    7:         <link rel="icon" href="/static/images/favicon.png"/>
+    8          <title>MediStore</title>
+
+   46                                  <div class="img">
+   47:                                     <a href="{{ url_for('cart') }}"> <img class="img-responsive" src="/static/images/cart.png" alt="" title="" width="26" height="27" /></a>
+   48                                  </div><span>Your cart:</span><span class="cart_total">Rs. {{ '%0.2f'| format(subtotal|float) }}</span><span class="cart_items">({{ len_items }} items)</span>
+
+  225                                  <ul class="thumbnails">
+  226:                                     <li><a  href="#" class="thumbnail fix-box"><img class="changeimg" src="/static/images/img15.jpg"></a></li>
+  227                                      <!-- <li class="image-additional"><a title="Dianabol"  class="thumbnail"> 
+  228:                                             <img class="galleryimg" src="/static/images/img21.jpg"></a></li>
+  229                                      <li class="image-additional"><a title="Proviron"  class="thumbnail"> 
+  230:                                             <img class="galleryimg" src="/static/images/img22.jpg"></a></li> -->
+  231                                  </ul>
+
+  362                                                          <a href="{{ url_for('singleproduct', pid=item[5], rol=item[4]) }}">
+  363:                                                             <img src="/static/images/d1.jpg"  class="img-responsive" width="200" height="200" />		
+  364                                                          </a>
+
+  421                                                          <a href="single-product.html">
+  422:                                                             <img src="/static/images/d15.jpg"  class="img-responsive" width="200" height="200" />		
+  423                                                          </a>
+
+  459                                                          <a href="single-product.html">
+  460:                                                             <img src="/static/images/d1.jpg"  class="img-responsive" width="200" height="200" />		
+  461                                                          </a>
+
+templates\supplier.html:
+  7          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  8:         <link rel="icon" href="/static/images/favicon.png"/>
+  9          <title>GSAA MediStore</title>
+
+templates\supproduct.html:
+    7          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    8:         <link rel="icon" href="/static/images/favicon.png"/>
+    9          <title>GSAA MediStore</title>
+
+  164                              <div class="row">
+  165:                                 <div class="col-sm-2 col-xs-6"><img class="img-thumbnail"  src="/static/images/img15.jpg"></div>
+  166                                  <div class="col-sm-10 col-xs-6"><p>
+
+  203                                                                  <a href="#">
+  204:                                                                     <img src="/static/images/d1.jpg" class="img-responsive" width="200" height="200" />
+  205                                                                  </a>
+
+templates\supsearch.html:
+    7          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    8:         <link rel="icon" href="/static/images/favicon.png"/>
+    9          <title>GSAA MediStore</title>
+
+  164                              <div class="row">
+  165:                                 <div class="col-sm-2 col-xs-6"><img class="img-thumbnail"  src="/static/images/img15.jpg"></div>
+  166                                  <div class="col-sm-10 col-xs-6"><p>
+
+  203                                                                  <a href="#">
+  204:                                                                     <img src="/static/images/d1.jpg" class="img-responsive" width="200" height="200" />
+  205                                                                  </a>
