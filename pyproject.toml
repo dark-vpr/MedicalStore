@@ -27,5 +27,5 @@ dependencies = [
     "python-dateutil",
     "simple-pid",
     "six",
-    "werkzeug",
+    "werkzeug"
 ]

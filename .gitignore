@@ -8,5 +8,5 @@ venv/
 uv.lock
 */uv.lock
 
-.vscode
-*/.vscode
+.vscode/
+*/.vscode/
