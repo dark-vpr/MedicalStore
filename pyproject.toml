@@ -1,0 +1,31 @@
+[project]
+name = "medicalstore"
+version = "0.1.0"
+description = "This is a Online Medical Store Web APP"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcrypt",
+    "blinker",
+    "cffi",
+    "click",
+    "colorama",
+    "cycler",
+    "dnspython",
+    "flask-bcrypt",
+    "flask",
+    "future",
+    "gunicorn",
+    "itsdangerous",
+    "jinja2",
+    "markupsafe",
+    "mysql-connector-python",
+    "packaging",
+    "protobuf",
+    "pycparser",
+    "pyparsing",
+    "python-dateutil",
+    "simple-pid",
+    "six",
+    "werkzeug",
+]

@@ -1,0 +1,12 @@
+# Ignore virtual environment directories
+venv/
+*/venv/
+
+.venv/
+*/.venv/
+
+uv.lock
+*/uv.lock
+
+.vscode
+*/.vscode
